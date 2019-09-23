@@ -40,11 +40,11 @@ public class PlayerController : MonoBehaviour {
             Jump();
         }
 
-        if (inputDir != Vector2.zero)
-        {
+        //if (inputDir != Vector2.zero)
+        //{
             float targetRotation = Mathf.Atan2(0, 1) * Mathf.Rad2Deg + cameraT.eulerAngles.y;
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
-        }
+        //}
 
         bool running = Input.GetKey(KeyCode.LeftShift);
         float targetSpeed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude;
