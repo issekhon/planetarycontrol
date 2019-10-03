@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TacticalCamera : MonoBehaviour {
 
+
+
 	public void RotateLeft(){
 		transform.Rotate (Vector3.up, 90, Space.Self);
 	}
